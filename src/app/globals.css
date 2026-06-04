@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050505;
+  --foreground: #F8FAFC;
+  --color-brand-deep-black: #050505;
+  --color-brand-carbon: #111111;
+  --color-brand-dark-purple: #4C1D95;
+  --color-brand-neon-purple: #7C3AED;
+  --color-brand-electric-blue: #2563EB;
+  --color-brand-neon-blue: #3B82F6;
+  --color-brand-soft-white: #F8FAFC;
+  --color-brand-smoke-gray: #94A3B8;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand-deep-black: var(--color-brand-deep-black);
+  --color-brand-carbon: var(--color-brand-carbon);
+  --color-brand-dark-purple: var(--color-brand-dark-purple);
+  --color-brand-neon-purple: var(--color-brand-neon-purple);
+  --color-brand-electric-blue: var(--color-brand-electric-blue);
+  --color-brand-neon-blue: var(--color-brand-neon-blue);
+  --color-brand-soft-white: var(--color-brand-soft-white);
+  --color-brand-smoke-gray: var(--color-brand-smoke-gray);
+  --font-sans: var(--font-plus-jakarta);
+  --font-heading: var(--font-syne);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+  font-family: var(--font-plus-jakarta), sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-syne), sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f1f23;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7C3AED;
+}
+
+/* Subtle Grain Overlay */
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.02;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.4' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: rgba(17, 17, 17, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Glow Effects */
+.glow-purple {
+  box-shadow: 0 0 30px rgba(124, 58, 237, 0.2);
+}
+
+.glow-blue {
+  box-shadow: 0 0 30px rgba(37, 99, 235, 0.2);
+}
+
+.glow-text-purple {
+  text-shadow: 0 0 15px rgba(124, 58, 237, 0.6);
+}
+
+.glow-text-blue {
+  text-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
+}
+

@@ -1,0 +1,33 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Purple Glow -->
+    <filter id="glow-purple" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <!-- Blue Glow -->
+    <filter id="glow-blue" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="1.2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Black background -->
+  <rect width="32" height="32" rx="6" fill="#050505" />
+
+  <!-- Outer purple neon circle -->
+  <circle cx="16" cy="16" r="7" stroke="#7C3AED" stroke-width="2" filter="url(#glow-purple)" />
+  <!-- Inner soft white circle detail -->
+  <circle cx="16" cy="16" r="7" stroke="#F8FAFC" stroke-width="0.8" />
+
+  <!-- Diagonal electric blue slash -->
+  <line x1="10" y1="22" x2="22" y2="10" stroke="#2563EB" stroke-width="2" filter="url(#glow-blue)" />
+  <!-- Diagonal white highlight line -->
+  <line x1="10" y1="22" x2="22" y2="10" stroke="#3B82F6" stroke-width="0.8" />
+</svg>
