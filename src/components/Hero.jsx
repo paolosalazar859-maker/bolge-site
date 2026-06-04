@@ -46,7 +46,7 @@ export default function Hero() {
       {/* Content */}
       <div className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-12 items-center z-10">
         {/* Left Side: Typography & CTA */}
-        <div className="lg:col-span-7 flex flex-col items-start text-left order-2 lg:order-1">
+        <div className="lg:col-span-7 flex flex-col items-center text-center order-2 lg:order-1 md:items-start md:text-left">
 
 
           {/* Artist Name (Responsive sizes for mobile viewports) */}
@@ -54,7 +54,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: -30, filter: "blur(10px)" }}
             animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
             transition={{ duration: 1.0, ease: [0.16, 1, 0.3, 1] }}
-            className="font-heading text-5xl sm:text-7xl md:text-8xl lg:text-[100px] font-light tracking-[0.08em] text-white leading-none select-none"
+            className="-mt-24 lg:mt-0 font-heading text-5xl sm:text-7xl md:text-8xl lg:text-[100px] font-light tracking-[0.08em] text-white leading-none select-none"
           >
             B<span className="text-brand-neon-purple glow-text-purple font-normal">Ø</span>LGE
           </motion.h1>
