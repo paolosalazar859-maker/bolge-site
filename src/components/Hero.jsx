@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen w-full flex items-start justify-start pt-[18vh] overflow-hidden px-6 md:px-16 lg:px-24"
+      className="relative min-h-screen w-full flex flex-col items-center justify-center pt-[18vh] md:items-start md:justify-start overflow-hidden px-6 md:px-16 lg:px-24 text-center md:text-left"
     >
       {/* Locked Background image — positioned to feature the guitar */}
       <div
@@ -47,15 +47,7 @@ export default function Hero() {
       <div className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-12 items-center z-10">
         {/* Left Side: Typography & CTA */}
         <div className="lg:col-span-7 flex flex-col items-start text-left order-2 lg:order-1">
-          {/* Subtle Accent Tag */}
-          <motion.div
-            className="relative flex items-center gap-2 px-3 py-1 bg-black/30 border border-white/10 rounded-full mb-6"
-          >
-            <span className="relative w-1.5 h-1.5 rounded-full bg-brand-neon-purple animate-ping" />
-            <span className="relative text-[10px] uppercase tracking-[0.25em] text-brand-smoke-gray font-mono font-medium">
-              Sitio Oficial
-            </span>
-          </motion.div>
+
 
           {/* Artist Name (Responsive sizes for mobile viewports) */}
           <motion.h1
