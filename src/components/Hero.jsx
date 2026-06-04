@@ -60,21 +60,14 @@ export default function Hero() {
           </motion.h1>
 
           {/* Slogan */}
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 0.8, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-6 text-lg md:text-2xl text-brand-smoke-gray tracking-wide font-light max-w-xl"
-          >
-            Cada canción tiene su momento.
-          </motion.p>
+
 
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
+            className="mt-24 sm:mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
           >
             {/* Primary CTA */}
             <button
