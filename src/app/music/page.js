@@ -2,7 +2,8 @@
 "use client";
 import Link from "next/link";
 import { FaSpotify } from "react-icons/fa";
-import { FaApple, SiTidal } from "react-icons/fa";
+import { FaApple } from "react-icons/fa";
+import { SiTidal } from "react-icons/si";
 
 export default function MusicPage() {
   return (
