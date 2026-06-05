@@ -1,14 +1,15 @@
 "use client";
-
+import Head from "next/head";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import CinematicBackground from "@/components/CinematicBackground";
-import LoadingScreen from "@/components/LoadingScreen";
-import Hero from "@/components/Hero";
-import Music from "@/components/Music";
-import Gallery from "@/components/Gallery";
-import Socials from "@/components/Socials";
-import Footer from "@/components/Footer";
+import dynamic from "next/dynamic";
+const CinematicBackground = dynamic(() => import("@/components/CinematicBackground"), { ssr: false });
+const LoadingScreen = dynamic(() => import("@/components/LoadingScreen"), { ssr: false });
+const Hero = dynamic(() => import("@/components/Hero"), { ssr: false });
+const Music = dynamic(() => import("@/components/Music"), { ssr: false });
+const Gallery = dynamic(() => import("@/components/Gallery"), { ssr: false });
+const Socials = dynamic(() => import("@/components/Socials"), { ssr: false });
+const Footer = dynamic(() => import("@/components/Footer"), { ssr: false });
 
 const navItems = [
   { id: "inicio",      label: "Inicio" },
@@ -45,7 +46,17 @@ export default function Home() {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
   };
-
+  useEffect(() => {
+    if (!isLoading) {
+      // Load heavy components when the browser is idle (after the intro animation)
+      requestIdleCallback(() => {
+        import("@/components/Music");
+        import("@/components/Gallery");
+        import("@/components/Socials");
+        import("@/components/Footer");
+      });
+    }
+  }, [isLoading]);
   return (
     <>
       {/* CSS Nebula background — stable, no WebGL, works on all devices */}

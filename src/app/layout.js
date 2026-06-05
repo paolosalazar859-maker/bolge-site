@@ -1,5 +1,6 @@
 import { Syne, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import Head from "next/head";
 
 const syne = Syne({
   variable: "--font-syne",

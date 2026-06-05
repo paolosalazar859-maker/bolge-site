@@ -20,21 +20,12 @@ export default function Music() {
     if (!audio) return;
 
     const onTimeUpdate = () => {
-      // 30 seconds preview limit
-      if (audio.currentTime >= 30) {
-        audio.pause();
-        audio.currentTime = 0;
-        setIsPlaying(false);
-        setCurrentTime(0);
-      } else {
         setCurrentTime(audio.currentTime);
-      }
-    };
+      };
 
     const onLoadedMetadata = () => {
-      // Display 30 seconds max since it is a preview
-      setDuration(Math.min(audio.duration, 30));
-    };
+        setDuration(audio.duration);
+      };
 
     const onEnded = () => {
       setIsPlaying(false);
@@ -78,8 +69,8 @@ export default function Music() {
     const width = rect.width;
     const percentage = clickX / width;
     
-    // Seek within the 30-second preview limit
-    const targetTime = percentage * 30;
+    // Seek within full track duration
+    const targetTime = percentage * audio.duration;
     audio.currentTime = targetTime;
     setCurrentTime(targetTime);
   };
@@ -210,9 +201,9 @@ export default function Music() {
                   <div className="mt-5 w-full bg-white/[0.03] border border-white/5 rounded p-3 relative">
                     <div className="flex items-center justify-between text-[10px] font-sans text-brand-smoke-gray mb-1">
                       <span className="flex items-center gap-1">
-                        <Volume2 className="w-3 h-3 text-brand-neon-purple" /> Preview de 30s
+                        <Volume2 className="w-3 h-3 text-brand-neon-purple" /> Duración completa
                       </span>
-                      <span>{formatTime(currentTime)} / 0:30</span>
+                      <span>{formatTime(currentTime)} / {formatTime(duration)}</span>
                     </div>
 
                     {/* Progress Bar (Clickable) */}
@@ -223,7 +214,7 @@ export default function Music() {
                     >
                       <div
                         className="h-full bg-gradient-to-r from-brand-neon-purple to-brand-neon-blue transition-all duration-100"
-                        style={{ width: `${(currentTime / 30) * 100}%` }}
+                        style={{ width: `${(currentTime / duration) * 100}%` }}
                       />
                     </div>
 

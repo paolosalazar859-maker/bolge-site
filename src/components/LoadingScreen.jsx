@@ -69,7 +69,7 @@ export default function LoadingScreen({ onComplete }) {
               className="text-[11px] tracking-[0.38em] uppercase text-[#94A3B8] select-none"
               style={{ fontFamily: "var(--font-plus-jakarta), sans-serif" }}
             >
-              Música para los que sienten demasiado.
+
             </motion.p>
           </motion.div>
 
