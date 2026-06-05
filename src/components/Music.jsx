@@ -123,16 +123,14 @@ export default function Music() {
             className="lg:col-span-7 flex flex-col gap-6 items-center w-full mx-auto"
           >
             <div className="p-1 rounded-sm bg-gradient-to-br from-white/5 to-white/0 border border-white/10 shadow-[0_0_30px_rgba(0,0,0,0.6)] overflow-hidden">
-              <iframe
-                src="https://open.spotify.com/embed/artist/4Lu8zzPkOAP592vdHFHKA0?utm_source=generator&theme=0"
-                width="100%"
-                height="500"
-                frameBorder="0"
-                allowFullScreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-                className="rounded-sm bg-[#111111]"
-              />
+                <iframe
+                  src="https://open.spotify.com/embed/artist/4Lu8zzPkOAP592vdHFHKA0?utm_source=generator&theme=0"
+                  className="w-full h-[300px] md:h-[500px] rounded-sm bg-[#111111]"
+                  frameBorder="0"
+                  allowFullScreen=""
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                ></iframe>
             </div>
             <p className="text-[11px] font-sans tracking-widest text-brand-smoke-gray uppercase text-center">
                 Reproductor Oficial de Spotify · Explora su discografía

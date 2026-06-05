@@ -34,6 +34,11 @@ export default function RootLayout({ children }) {
       lang="es"
       className={`${syne.variable} ${plusJakarta.variable} h-full scroll-smooth antialiased`}
     >
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>BØLGE | Sitio Oficial</title>
+        <meta name="description" content="Entra al universo artístico de BØLGE. Escucha sus sencillos, explora su galería de fotos editorial y síguelo en sus redes oficiales." />
+      </Head>
       <body className="min-h-full flex flex-col bg-[#050505] text-[#F8FAFC]">
         {children}
       </body>
