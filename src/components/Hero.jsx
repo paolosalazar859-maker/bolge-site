@@ -8,9 +8,7 @@ export default function Hero() {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
+
 
   return (
     <section
@@ -74,18 +72,12 @@ export default function Hero() {
             className="mt-24 sm:mt-10 flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
           >
             {/* Primary CTA */}
-            <Link href="/music">
-                <a className="group relative px-8 py-4 bg-[#050505] text-white font-medium tracking-[0.15em] text-xs uppercase border border-brand-neon-purple/40 rounded-sm overflow-hidden transition-all duration-500 hover:border-brand-neon-purple hover:shadow-[0_0_25px_rgba(124,58,237,0.35)] cursor-pointer">
-                  <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-brand-neon-purple/20 to-brand-electric-blue/20 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out -z-10" />
-                  ESCUCHAR AHORA
-                </a>
-              </Link>
+            <Link href="/music" className="group relative px-8 py-4 bg-[#050505] text-white font-medium tracking-[0.15em] text-xs uppercase border border-brand-neon-purple/40 rounded-sm overflow-hidden transition-all duration-500 hover:border-brand-neon-purple hover:shadow-[0_0_25px_rgba(124,58,237,0.35)] cursor-pointer">
+  <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-brand-neon-purple/20 to-brand-electric-blue/20 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out -z-10" />
+  ESCUCHAR AHORA
+</Link>
             {/* Secondary CTA */}
-            <Link href="/community">
-                <a className="relative px-8 py-4 bg-white/5 border border-white/10 text-[#F8FAFC] font-medium tracking-[0.15em] text-xs uppercase rounded-sm overflow-hidden transition-all duration-300 hover:bg-white/10 hover:border-white/20 flex items-center justify-center gap-2 cursor-pointer">
-                  SEGUIR EN
-                </a>
-              </Link>
+            <Link href="/community" className="relative px-8 py-4 bg-white/5 border border-white/10 text-[#F8FAFC] font-medium tracking-[0.15em] text-xs uppercase rounded-sm overflow-hidden transition-all duration-300 hover:bg-white/10 hover:border-white/20 flex items-center justify-center gap-2 cursor-pointer">SEGUIR EN</Link>
           </motion.div>
         </div>
       </div>
