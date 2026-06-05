@@ -49,7 +49,15 @@ export default function Home() {
   useEffect(() => {
     if (!isLoading) {
       // Load heavy components when the browser is idle (after the intro animation)
-      requestIdleCallback(() => {
+      const scheduleIdle = (cb) => {
+        if (typeof requestIdleCallback === "function") {
+          requestIdleCallback(cb);
+        } else {
+          // Fallback for browsers without requestIdleCallback (e.g., Safari iOS)
+          setTimeout(cb, 200);
+        }
+      };
+      scheduleIdle(() => {
         import("@/components/Music");
         import("@/components/Gallery");
         import("@/components/Socials");
