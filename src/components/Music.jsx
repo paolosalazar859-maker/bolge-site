@@ -176,7 +176,7 @@ export default function Music() {
                 {/* Release Details */}
                 <div className="flex flex-col text-center sm:text-left flex-grow">
                   <span className="text-[10px] uppercase tracking-[0.25em] text-brand-neon-purple font-sans font-semibold flex items-center justify-center sm:justify-start gap-2">
-                    Próximo Lanzamiento
+                     Próximo Single
                     {isPlaying && (
                       <span className="flex items-center gap-[2px]">
                         <span className="w-[2px] h-3 bg-brand-neon-purple animate-pulse" />
@@ -189,7 +189,7 @@ export default function Music() {
                     NTANS
                   </h3>
                   <p className="mt-1 text-sm text-brand-smoke-gray font-light">
-                    Sencillo · Atmósfera Urbana Oscura
+                     Sencillo · Trap Melódico · West Coast
                   </p>
                   
                   <div className="mt-3 flex items-center justify-center sm:justify-start gap-2 text-xs text-brand-smoke-gray font-sans">
@@ -244,7 +244,7 @@ export default function Music() {
               {/* Bio/Description */}
               <div className="mt-6 border-t border-white/5 pt-5">
                 <p className="text-xs md:text-sm text-brand-smoke-gray leading-relaxed font-light font-sans text-justify">
-                  Una exploración de la obsesión, el deseo y los recuerdos que permanecen después de un encuentro imposible de olvidar. Entre melodías envolventes, atmósferas nocturnas y una interpretación íntima, BØLGE retrata ese momento en que alguien ocupa cada pensamiento, difuminando la línea entre la atracción y el enamoramiento.
+                  Una mezcla de trap, hip‑hop y sonidos west coast que retrata la sensación de tener a alguien dando vueltas en tu cabeza mucho después de que la noche termina.
                 </p>
               </div>
 

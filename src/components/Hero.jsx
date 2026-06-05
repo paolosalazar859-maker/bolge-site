@@ -1,8 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; import { useState } from "react";
 
 export default function Hero() {
+  const [showMusicLinks, setShowMusicLinks] = useState(false);
+  const [showSocialLinks, setShowSocialLinks] = useState(false);
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -71,21 +73,33 @@ export default function Hero() {
           >
             {/* Primary CTA */}
             <button
-              onClick={() => scrollToSection("musica")}
-              className="group relative px-8 py-4 bg-[#050505] text-white font-medium tracking-[0.15em] text-xs uppercase border border-brand-neon-purple/40 rounded-sm overflow-hidden transition-all duration-500 hover:border-brand-neon-purple hover:shadow-[0_0_25px_rgba(124,58,237,0.35)] cursor-pointer"
-            >
-              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-brand-neon-purple/20 to-brand-electric-blue/20 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out -z-10" />
-              ESCUCHAR AHORA
-            </button>
+                onClick={() => setShowMusicLinks(!showMusicLinks)}
+                className="group relative px-8 py-4 bg-[#050505] text-white font-medium tracking-[0.15em] text-xs uppercase border border-brand-neon-purple/40 rounded-sm overflow-hidden transition-all duration-500 hover:border-brand-neon-purple hover:shadow-[0_0_25px_rgba(124,58,237,0.35)] cursor-pointer"
+              >
+                <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-brand-neon-purple/20 to-brand-electric-blue/20 transform scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500 ease-out -z-10" />
+                ESCUCHAR AHORA
+              </button>
+              {showMusicLinks && (
+                <div className="mt-2 flex flex-col gap-2">
+                  <a href="https://open.spotify.com/artist/4Lu8zzPkOAP592vdHFHKA0" target="_blank" rel="noopener noreferrer" className="text-xs underline text-brand-neon-purple">Spotify</a>
+                  <a href="https://music.apple.com/artist/placeholder" target="_blank" rel="noopener noreferrer" className="text-xs underline text-brand-neon-purple">Apple Music</a>
+                  <a href="https://tidal.com/browse/artist/placeholder" target="_blank" rel="noopener noreferrer" className="text-xs underline text-brand-neon-purple">Tidal</a>
+                </div>
+              )}
             {/* Secondary CTA */}
-            <a
-              href="https://www.instagram.com/bolge__"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative px-8 py-4 bg-white/5 border border-white/10 text-[#F8FAFC] font-medium tracking-[0.15em] text-xs uppercase rounded-sm overflow-hidden transition-all duration-300 hover:bg-white/10 hover:border-white/20 flex items-center justify-center gap-2"
-            >
-              SEGUIR EN INSTAGRAM
-            </a>
+            <button
+                onClick={() => setShowSocialLinks(!showSocialLinks)}
+                className="relative px-8 py-4 bg-white/5 border border-white/10 text-[#F8FAFC] font-medium tracking-[0.15em] text-xs uppercase rounded-sm overflow-hidden transition-all duration-300 hover:bg-white/10 hover:border-white/20 flex items-center justify-center gap-2 cursor-pointer"
+              >
+                SEGUIR EN
+              </button>
+              {showSocialLinks && (
+                <div className="mt-2 flex flex-col gap-2">
+                  <a href="https://www.tiktok.com/@bolge__" target="_blank" rel="noopener noreferrer" className="text-xs underline text-brand-neon-purple">TikTok</a>
+                  <a href="https://www.instagram.com/bolge__" target="_blank" rel="noopener noreferrer" className="text-xs underline text-brand-neon-purple">Instagram</a>
+                  <a href="https://www.youtube.com/channel/placeholder" target="_blank" rel="noopener noreferrer" className="text-xs underline text-brand-neon-purple">YouTube</a>
+                </div>
+              )}
           </motion.div>
         </div>
       </div>
