@@ -76,9 +76,7 @@ export default function Gallery() {
               Visuales
             </span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-extralight tracking-wide text-white leading-tight">
-            Galería Editorial
-          </h2>
+          <h2 className="text-3xl md:text-5xl font-extralight tracking-wide text-white leading-tight">Mira nuestras fotos</h2>
         </div>
 
         {/* Pinterest Premium Masonry Grid (2 columns on mobile, 3 on desktop) */}

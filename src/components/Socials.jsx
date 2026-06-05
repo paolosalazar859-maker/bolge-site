@@ -2,23 +2,13 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+import { FaSpotify } from "react-icons/fa";
+import { SiApplemusic, SiTidal } from "react-icons/si";
 
 // Social networks configurations
 const socialNetworks = [
-  {
-    name: "Spotify",
-    url: "https://open.spotify.com/artist/4Lu8zzPkOAP592vdHFHKA0?si=ceX1x5ewQGe5AsLarqqGSA",
-    username: "BØLGE",
-    bgColor: "hover:bg-[#1DB954]/5",
-    borderColor: "hover:border-[#1DB954]/40",
-    glowColor: "group-hover:shadow-[0_0_35px_rgba(29,185,84,0.3)]",
-    iconColor: "text-[#1DB954]",
-    svg: (
-      <svg className="w-8 h-8 fill-current" viewBox="0 0 24 24">
-        <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424c-.18.295-.565.387-.86.207-2.377-1.454-5.37-1.783-8.893-.98-.336.075-.67-.136-.746-.472-.075-.337.136-.67.472-.747 3.856-.88 7.15-.509 9.82 1.13.297.18.39.563.207.862zm1.224-2.723c-.226.367-.707.487-1.074.26-2.72-1.672-6.87-2.157-10.076-1.183-.413.125-.85-.106-.975-.52-.125-.413.107-.85.52-.975 3.666-1.112 8.232-.574 11.345 1.34.37.227.49.708.26 1.078zm.105-2.825C14.39 8.766 8.583 8.574 5.213 9.597c-.523.158-1.078-.143-1.237-.666-.158-.522.143-1.078.666-1.237 3.864-1.173 10.283-.946 14.346 1.467.47.28.625.892.345 1.362-.28.47-.892.625-1.362.345z" />
-      </svg>
-    ),
-  },
+
   {
     name: "Instagram",
     url: "https://www.instagram.com/bolge__",
@@ -49,20 +39,7 @@ const socialNetworks = [
       </svg>
     ),
   },
-  {
-    name: "Tidal",
-    url: "https://tidal.com/artist/8953328/u",
-    username: "BØLGE",
-    bgColor: "hover:bg-[#333333]/10",
-    borderColor: "hover:border-white/30",
-    glowColor: "group-hover:shadow-[0_0_35px_rgba(255,255,255,0.15)]",
-    iconColor: "text-white",
-    svg: (
-      <svg className="w-8 h-8 fill-current" viewBox="0 0 24 24">
-        <path d="M12 7.156l-4.844 4.844 4.844 4.844 4.844-4.844L12 7.156zM4.844 12L0 16.844l4.844 4.844 4.844-4.844L4.844 12zm14.312 0l-4.844 4.844 4.844 4.844L24 16.844 19.156 12zM12 0L7.156 4.844 12 9.688l4.844-4.844L12 0z" />
-      </svg>
-    ),
-  },
+
   {
     name: "YouTube",
     url: "https://youtube.com/@bolge-i4h",

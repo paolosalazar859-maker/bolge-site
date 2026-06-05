@@ -3,6 +3,9 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Play, Pause, Calendar, Lock, Volume2 } from "lucide-react";
+import Link from "next/link";
+import { FaSpotify } from "react-icons/fa";
+import { SiApplemusic, SiTidal } from "react-icons/si";
 
 export default function Music() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -117,13 +120,13 @@ export default function Music() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="lg:col-span-6 flex flex-col gap-6"
+            className="lg:col-span-7 flex flex-col gap-6 items-center w-full mx-auto"
           >
             <div className="p-1 rounded-sm bg-gradient-to-br from-white/5 to-white/0 border border-white/10 shadow-[0_0_30px_rgba(0,0,0,0.6)] overflow-hidden">
               <iframe
                 src="https://open.spotify.com/embed/artist/4Lu8zzPkOAP592vdHFHKA0?utm_source=generator&theme=0"
                 width="100%"
-                height="380"
+                height="500"
                 frameBorder="0"
                 allowFullScreen=""
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -132,8 +135,22 @@ export default function Music() {
               />
             </div>
             <p className="text-[11px] font-sans tracking-widest text-brand-smoke-gray uppercase text-center">
-              Reproductor Oficial de Spotify · Explora su discografía
-            </p>
+                Reproductor Oficial de Spotify · Explora su discografía
+              </p>
+              <div className="flex flex-row gap-4 items-center justify-center mt-6 w-full mx-auto">
+                <Link href="https://open.spotify.com/artist/4Lu8zzPkOAP592vdHFHKA0" target="_blank" rel="noopener noreferrer" className="group relative px-8 py-4 bg-[#050505] text-white flex items-center gap-3 text-xl hover:opacity-80 transition-opacity rounded-sm overflow-hidden">
+                  <FaSpotify className="text-green-500" size={32} />
+                  <span>Spotify</span>
+                </Link>
+                <Link href="https://music.apple.com/us/artist/b%C3%B8lge/1261895838" target="_blank" rel="noopener noreferrer" className="group relative px-8 py-4 bg-[#050505] text-white flex items-center gap-3 text-xl hover:opacity-80 transition-opacity rounded-sm overflow-hidden">
+                  <SiApplemusic className="text-gray-300" size={32} />
+                  <span>Apple Music</span>
+                </Link>
+                <Link href="https://tidal.com/artist/8953328/u" target="_blank" rel="noopener noreferrer" className="group relative px-8 py-4 bg-[#050505] text-white flex items-center gap-3 text-xl hover:opacity-80 transition-opacity rounded-sm overflow-hidden">
+                  <SiTidal className="text-white" size={32} />
+                  <span>Tidal</span>
+                </Link>
+              </div>
           </motion.div>
 
           {/* Right Column: Featured Release Detail with Custom Audio Player */}
@@ -142,7 +159,7 @@ export default function Music() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="lg:col-span-6 flex flex-col"
+            className="lg:col-span-5 flex flex-col"
           >
             <div className="glass-panel p-6 md:p-8 rounded-sm border border-white/10 relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-32 h-32 bg-brand-neon-purple/10 rounded-full blur-2xl pointer-events-none" />
